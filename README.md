@@ -1,2 +1,2 @@
 # codewars
-Codewars tests sorted by level
+My solutions to Codewars tests sorted by level
