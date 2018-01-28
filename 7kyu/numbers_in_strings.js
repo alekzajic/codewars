@@ -7,16 +7,17 @@
 
 // 1) -------------------------------
 
-// solve = (string) => {
-//     return string
-//             .replace(/[^0-9]/g,' ')
-//             .split(' ')
-//             .map(Number)
-//             .sort((a, b) => b - a)[0];
-// };
+solve1 = (string) => {
+    return string
+            .replace(/[^0-9]/g,' ')
+            .split(' ')
+            .map(Number)
+            .sort((a, b) => b - a)[0];
+};
 
 // 2) --------------------------------
 
-solve = s => Math.max(...s.match(/\d+|$/g));
+solve2 = s => Math.max(...s.match(/\d+|$/g));
 
-console.log(solve("gh12cd900y695m1")); // 695
+console.log("solve1: ", solve1("gh12cd900y695m1")); // 695
+console.log("solve2: ", solve2("gh12cd900y695m1")); // 695
