@@ -6,7 +6,7 @@ After the password is transformed, it is then called a password hash. Whenever y
 
 Create the function passHash that converts a given string into an md5 hash. The return value should be encoded in hexadecimal.
 
-You will need to use the NodeJS Crypto Module.
+You will need to use the [NodeJS Crypto Module](https://nodejs.org/api/crypto.html).
 
 ### Code Examples
 
@@ -17,8 +17,6 @@ passHash('password')
 passHash('abc123')
   //--> 'e99a18c428cb38d5f260853678922e03'
 ```
-If you want to externally test a string, look at this website.
-
-If you are completely lost, I recommend you check out my previous Introduction to NodeJS.
+If you want to externally test a string, look at this [website](http://www.md5hasher.net/).
 
 As a side note, md5 can be exploited, so never use it for anything secure. The reason I used it in this kata is simply because it is a very common hashing algorithm and many people will recognize the name.
