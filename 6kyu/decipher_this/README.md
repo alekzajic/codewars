@@ -1,4 +1,5 @@
-#Decipher this!
+# Decipher this!
+
 You are given several secret messages you need to decipher. Here are the conditions:
 
 The first letter corresponds to ASCII character code (case sensitive)
