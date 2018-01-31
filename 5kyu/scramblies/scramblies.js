@@ -28,3 +28,4 @@ console.log(scramble('scriptsjava','javascripts')) //true;
 console.log(scramble('jscripts','javascript')) //false;
 console.log(scramble('aabbcamaomsccdd','commas')) //true;
 console.log(scramble('otacomb','cat')) //true;
+console.log(scramble('god','dog')) //true;
