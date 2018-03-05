@@ -1,6 +1,6 @@
 
 def longest_slide_down(pyr)
-    (pyr.length-2).downto(0) do |r|
+    (pyr.length - 2).downto(0) do |r|
         0.upto(r) do |p|
             pyr[r][p] += [pyr[r+1][p],pyr[r+1][p+1]].max
         end
@@ -13,7 +13,9 @@ print(longest_slide_down(
   [7, 4],
   [2, 4, 6],
   [8, 5, 9, 3]]))  #=> 23
+
 print("\n")
+
 print(longest_slide_down(
  [[75],
   [95, 64],
