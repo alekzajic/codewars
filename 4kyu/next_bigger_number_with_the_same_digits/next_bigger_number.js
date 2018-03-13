@@ -36,13 +36,15 @@ nextBigger = (n) => {
 
     if (minIndex == null) return -1;
   
-
+    // rmove the number that needs to be changed
     right.splice(minIndex, 1);
-
     
+    // add number to the place of that needs to be changed
     right.push(elem);
+
+    // sort the right side
     right = right.sort();
-    
+
     // left + el + right
     let result = parseInt(arr.concat([min]).concat(right).join(''));
 
@@ -51,7 +53,7 @@ nextBigger = (n) => {
     return result;
 }
 
-console.log(nextBigger(324)) //423
+console.log(nextBigger(342)) //423
 console.log(nextBigger(12)) //21
 console.log(nextBigger(513)) //531
 console.log(nextBigger(2017)) //2071
