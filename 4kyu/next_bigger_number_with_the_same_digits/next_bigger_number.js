@@ -2,7 +2,7 @@ nextBigger = (n) => {
     let arr = n.toString().split('');
     let index = -1; 
     
-    // el index
+    // find element index thant needs to be changed
     for (let i=arr.length; i>0; i--) {
         if (+arr[i] > +arr[i-1]) {
             index = i-1;
@@ -10,17 +10,21 @@ nextBigger = (n) => {
         }
     }
 
-    // no el index
+    // if there is no bigger number return -1
     if (index == -1) return index;
 
-    // right
+    // get right part of the number from pivot
     let right = arr.splice(index);
 
-    // el
+    // smallest number in the right part
     let elem = right.splice(0, 1)[0];
 
+    // min num
     let min = null;
+    // min index
     let minIndex = null;
+
+    // find the number to switch and its index
     for (let i = 0; i < right.length; i++) {
       if (right[i] > elem) {
         if (min == null || right[i] < min) {
@@ -32,7 +36,10 @@ nextBigger = (n) => {
 
     if (minIndex == null) return -1;
   
+
     right.splice(minIndex, 1);
+
+    
     right.push(elem);
     right = right.sort();
     
@@ -44,7 +51,7 @@ nextBigger = (n) => {
     return result;
 }
 
-
+console.log(nextBigger(324)) //423
 console.log(nextBigger(12)) //21
 console.log(nextBigger(513)) //531
 console.log(nextBigger(2017)) //2071
