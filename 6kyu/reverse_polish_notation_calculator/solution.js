@@ -24,27 +24,6 @@ function calc(expr) {
   return +stack.pop();
 }
 
-function calc(expr) {
-  const operations = {
-    '+': (a, b) => a + b,
-    '-': (a, b) => a - b,
-    '*': (a, b) => a * b,
-    '/': (a, b) => a / b,
-  };
-
-  return +expr.split(' ').reduce((stack, token) => {
-    if (operations[token]) {
-      const rightValue = stack.pop();
-      const leftValue = stack.pop();
-      const result = operations[token](+leftValue, +rightValue);
-      stack.push(result);
-    } else {
-      stack.push(token);
-    }
-    return stack;
-  }, []).pop();
-}
-
 console.log(calc('5 1 2 + 4 * + 3 -') === 14)
 console.log(calc("") === 0) //, "Should work with empty string");
 console.log(calc("3") === 3) //, "Should parse numbers");
